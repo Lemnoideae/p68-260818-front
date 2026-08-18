@@ -23,7 +23,26 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       lang="ko"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body
+        className="
+        min-h-full
+        flex
+        flex-col"
+      >
+
+      <header>
+        <nav className="flex gap-4">
+          <a href="/">메인</a>
+          <a href="/posts">글 목록</a>
+          
+        </nav>
+      </header>
+      {children}
+      <footer>
+        푸터
+      </footer>
+
+      </body>
     </html>
   );
 }
